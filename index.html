@@ -1,0 +1,289 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+  <style></style>
+
+  <link rel="apple-touch-icon-precomposed" href="top.jpg" />
+
+  <link rel="apple-touch-icon-precomposed" sizes="76x76" href="top.jpg" />
+
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="top.jpg" />
+
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="top.jpg" />
+  <link rel="stylesheet" href="css1.css" />
+  <link rel="shortcut icon" href="favicon.ico" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>YUSUKE's portfolio</title>
+  <meta name="description" content="ポートフォリオ" />
+  <meta name="keywords" content="portfolio" />
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.min.js"></script>
+</head>
+<a name="top"></a>
+
+<body class="propaty">
+  <div>
+    <header id="header" class="header">
+      <ul class="topnav">
+        <li><a class="active" href="#top">Top</a></li>
+        <li><a href="#Profile">Profile</a></li>
+        <li><a href="#SKILL">SKILL</a></li>
+        <li><a href="#works">Works</a></li>
+      </ul>
+    </header>
+    <div class="contents"></div>
+    <main class="section0">
+      <section class="section1">
+        <h1>YUSUKE's Portfolio</h1>
+      </section>
+      <section class="section2">
+        <span id="Profile" class="link-t-a"></span>
+        <h1 class="title">Profile</h1>
+        <ul class="profile">
+          <li class="img">
+            <img class="img1" src="IMG_4403.JPG" />
+          </li>
+          <li class="self">
+            <table>
+              <tbody>
+                <tr>
+                  <th class="last-td">Name</th>
+                  <td class="last-td">
+                    松川 友祐 (Yusuke Matsukawa)
+                  </td>
+                </tr>
+                <tr>
+                  <th class="last-td">University</th>
+                  <td class="last-td">
+                    新潟大学 大学院 自然科学研究科
+                  </td>
+                </tr>
+                <tr>
+                  <th class="last-td">Birthday</th>
+                  <td class="last-td">
+                    1996/12/28
+                  </td>
+                </tr>
+                <tr>
+                  <th class="last-td">GitHub</th>
+                  <td class="last-td">
+                    <a href="https://github.com/yusukeeee28" target="_blank" rel="noopener noreferrer">
+                      yusukeeee28
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="last-td">Facebook</th>
+                  <td class="last-td">
+                    <a href="https://www.facebook.com/profile.php?id=100005045254128" target="_blank"
+                      rel="noopener noreferrer">
+                      松川 友祐
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="last-td">Twitter</th>
+                  <td class="last-td">
+                    <a href="https://twitter.com/yusukeeeee28" target="_blank" rel="noopener noreferrer">
+                      @yusukeeeee28
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="last-td">Blog</th>
+                  <td class="last-td">
+                    <a href="https://yusukenwanwan.hatenablog.jp" target="_blank" rel="noopener noreferrer">
+                      日常のつぶやくブログ
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="last-td">Mail</th>
+                  <td class="last-td">
+                    f19c029f@mail.cc.niigata.ac.jp
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </li>
+        </ul>
+      </section>
+      <section class="section3">
+        <span id="SKILL" class="link-t-a"></span>
+        <div>
+          <h1 class="title">SKILL</h1>
+          <div class="level-parent">
+            <p class="level">
+              ★☆☆☆☆ … 授業等で使用したことがある<br />
+              ★★☆☆☆ … リファレンスがあれば使用できる<br />
+              ★★★☆☆ … リファレンスなしでも使用できる<br />
+              ★★★★☆ … ライブラリやフレームワークを作成できる<br />
+              ★★★★★ … マスターレベル，内部仕様まで熟知している<br />
+            </p>
+          </div>
+          <div id="app">
+            <div class="tab_box">
+              <ul class="menu">
+                <li class="languages" v-on:click="change('1')" v-bind:class="{'active': isActive ===
+                  '1'}">
+                  <a href="#language">Language</a>
+                </li>
+                <li class="tools" v-on:click="change('2')" v-bind:class="{'active': isActive === '2'}">
+                  <a href="#tools">Tools</a>
+                </li>
+              </ul>
+
+              <ul class="skills">
+                <li v-if="isActive === '1'">
+                  <div class="row">
+                    <div class="col">
+                      <div class="skill">
+                        <ul class="item">
+                          <p class="lang"><strong>C</strong></p>
+                          <p class="exp">経験<br />2年/★★★☆☆</p>
+                        </ul>
+                        <p class="content">
+                          研究のシミュレーションを行う際，利用してます．
+                        </p>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="skill">
+                        <ul class="item">
+                          <p class="lang"><strong>Ruby on Rails</strong></p>
+                          <p class="exp">経験<br />1年/★★☆☆☆</p>
+                        </ul>
+                        <p class="content">
+                          大学の講義で初めて触り，インターンの課題提出の際，利用しました．
+                        </p>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="skill">
+                        <ul class="item">
+                          <p class="lang"><strong>JavaScript</strong></p>
+                          <p class="exp">経験<br />1ヶ月/★★☆☆☆</p>
+                        </ul>
+                        <p class="content">
+                          このポートフォリオを作成の際に，JavaScriptの基本を学習しました．
+                        </p>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="skill">
+                        <ul class="item">
+                          <p class="lang"><strong>Java</strong></p>
+                          <p class="exp">経験<br />1ヶ月/★☆☆☆☆</p>
+                        </ul>
+                        <p class="content">
+                          大学の講義で触りました．
+                        </p>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="skill">
+                        <ul class="item">
+                          <p class="lang"><strong>HTML &amp; CSS</strong></p>
+                          <p class="exp">経験<br />1年/★★☆☆☆</p>
+                        </ul>
+                        <p class="content">
+                          ホームページやこのページを作成するのに利用します．形がすぐ分かる言語は楽しいです！
+                        </p>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="skill">
+                        <ul class="item">
+                          <p class="lang"><strong>Swift</strong></p>
+                          <p class="exp">経験<br />3ヶ月/★★☆☆☆</p>
+                        </ul>
+                        <p class="content">
+                          iOSアプリを開発する際に触りました．1ヶ月程学習しました．
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li v-if="isActive === '2'">
+                  <div class="row">
+                    <div class="col">
+                      <div class="skill">
+                        <ul class="item">
+                          <p class="lang"><strong>Git/Github</strong></p>
+                          <p class="exp">経験<br />2年/★★☆☆☆</p>
+                        </ul>
+                        <p class="content">
+                          ソースコードを管理するために利用しています．基本的なコマンドは扱えます．
+                        </p>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="skill">
+                        <ul class="item">
+                          <p class="lang"><strong>Vue.js</strong></p>
+                          <p class="exp">経験<br />2年/★★★☆☆</p>
+                        </ul>
+                        <p class="content">
+                          このページを作成する際に利用しました．
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section4">
+        <span id="works" class="link-t-a"></span>
+        <h1 class="title">Works</h1>
+
+        <ul class="skills">
+          <div class="row">
+            <div class="col2">
+              <div class="skill2">
+                <ul class="item2">
+                  <p class="lang"><strong>メニュー決定アプリ</strong></p>
+                </ul>
+                <ul class="content2">
+                  <li class="li1">
+                    <img class="img2" src="IMG_0649.JPG" />
+                  </li>
+                  <li class="li2">
+                    <p>
+                      使用言語はSwiftです．アプリの中身として条件をボタンで選択し，その条件に当てはまるいくつかのメニューからランダムに１つ提案するというものであります．
+                      下記のURLにアプリリリースしてます </p>
+                    <a
+                      href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=1466942817&amp;mt=8">AppStoreへ</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col2">
+              <div class="skill2">
+                <ul class="item2">
+                  <p class="lang"><strong>家計簿アプリ</strong></p>
+                </ul>
+                <ul class="content2">
+                  <li class="li1">
+                    <img class="img2" src="imgviewf.asp.jpeg" />
+                  </li>
+                  <li class="li2">
+                    <p>
+                      使用言語はRuby on Railsです．SQLを用いてデータを登録，削除，追加を行うアプリです．項目別に追加したデータをソートする機能をオリジナリティ要素として追加しました．
+                    </p>
+                    <a href="https://github.com/yusukeeee28/home_account">Githubへ</a>
+                  </li>
+              </div>
+            </div>
+          </div>
+        </ul>
+      </section>
+    </main>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script src="./vue.js"></script>
+</body>
+
+</html>
